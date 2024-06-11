@@ -32,3 +32,5 @@ DROP TABLE category;
 ALTER TABLE product ADD column category enum('tote', 'handbag', 'crossbody', 'clutch');
 
 
+
+
