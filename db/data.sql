@@ -33,3 +33,7 @@ VALUES
     ("mia crocodile envelope clutch", 3, "product_image10.jpg", 1290.00, "Lorem Ipsum", "clutch");
 
 -- ALREADY PUT ABOVE INTO MYSQL
+
+INSERT INTO user(fName, lName, email, username, password)
+VALUES
+('Maggie', 'Woodard', 'magcwoodard@gmail.com', 'mwoodard', 'Testing123!');

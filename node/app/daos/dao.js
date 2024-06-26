@@ -9,9 +9,12 @@ const brandDao = {
 
 const productDao = {...daoCommon, ...require('./api/productDao')}
 
+const userDao = {...daoCommon, ...require('./api/userDao')}
+
 
 
 module.exports = {
     brandDao,
-    productDao
+    productDao,
+    userDao
 }

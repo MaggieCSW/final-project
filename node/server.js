@@ -1,5 +1,6 @@
 const express = require('express')
 const server = express()
+const router = require('./app/routes/router')
 const helmet = require('helmet')
 const cors = require('cors')
 
@@ -26,7 +27,7 @@ server.use(cors())
 
 
 //localhost:3005 => router.js
-// server.use('/', router)
+server.use('/', router)
 
 server.listen(PORT, ()=> console.log(`Port ${PORT} is listening to classy carryalls.`))
 
