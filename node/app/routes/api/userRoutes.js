@@ -10,7 +10,6 @@ router.get('/', (req, res)=> {
 
 
 
-// localhost:3005/api/user/count
 router.get('/count', (req, res)=> {
     dao.countAll(res, dao.table)
 })

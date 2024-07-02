@@ -10,14 +10,13 @@ const Header =()=> {
             <div className="container">
                 <div className="row">
                     <div className="col-md-5">
-                        <h1 className="header text-capitalize text-md-center display-2"></h1>
+                        <h1 className="header text-capitalize text-md-center">Classy Carryalls</h1>
                     </div>
                     <div className="col-md-7">
                         <nav className="nav justify-content-between text-capitalize">
-                            <Link to='/'>home</Link>
-                            <Link to='/user'>create account</Link>
-                            <Link to='/product'>view collection</Link>
-                            {/* <Link to='/brand'>shop by brand</Link> */}
+                            <Link to='/' className="top-text">home</Link>
+                            <Link to='/user' className="top-text" >create account</Link>
+                            <Link to='/product' className="top-text">view collection</Link>
                         </nav>
                     </div>
                 </div>

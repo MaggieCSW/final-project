@@ -1,7 +1,10 @@
+// activating my routes.. 
+// where the router gets the query
+
 const express = require('express')
 const router = express.Router()
 
-// localhost:3005/api/product
+
 
 const {productDao: dao} = require('../../daos/dao')
 
@@ -9,7 +12,6 @@ router.get('/', (req, res)=> {
     dao.findAll(res, dao.table)
 })
 
-// localhost:3005/api/product/count
 router.get('/count', (req, res)=> {
     dao.countAll(res, dao.table)
 })

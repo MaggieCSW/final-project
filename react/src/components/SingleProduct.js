@@ -7,6 +7,7 @@ import axios from 'axios'
 
     const SingleProduct =()=> {
 
+        // initializing state 
         const [ item, setItem ] = useState({})
 
         const params = useParams()

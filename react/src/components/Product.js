@@ -2,12 +2,6 @@ import { useState, useEffect } from "react"
 import axios from "axios" 
 import Card from "./Card"
 
-// ***********************************
-
-
-
-
-
 
 
 const Product =()=> {
@@ -24,12 +18,9 @@ const Product =()=> {
     console.log(product)
 
 
-// ***************************************************************************
-
 const productCards = product.map(product => {
     return <Card
 
-    // key = tableName.colName
             key={product.product_id}
             id={product.product_id}
             name={product.product_name}
@@ -40,17 +31,14 @@ const productCards = product.map(product => {
 })
 
 
-    
-
-// *******************************************************
 
     return(
         <>
             <div className="container">
                 <div className="col">
-                    <h2 className="productHeader">Products</h2>
+                    <h2 className="product-header">Our Collection</h2>
                 </div>
-                <div className="row row-cols-y row-cols-md-5 g-4">
+                <div className="row row-cols- row-cols-md-5 g-4">
                     {productCards}
                 </div>
             </div>

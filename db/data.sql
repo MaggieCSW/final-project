@@ -4,7 +4,7 @@ VALUES
     ('tote'),
     ('handbag'),
     ('clutch');
-    -- each one is a separate category.. is a string separated by (' '), (' '), (' ');
+
 
 INSERT INTO brand(brand)
 VALUES
@@ -32,7 +32,6 @@ VALUES
     ("val duffle bag", 4, "product_image9.jpg", 398.00, "Lorem Ipsum", "tote"),
     ("mia crocodile envelope clutch", 3, "product_image10.jpg", 1290.00, "Lorem Ipsum", "clutch");
 
--- ALREADY PUT ABOVE INTO MYSQL
 
 INSERT INTO user(fName, lName, email, username, password)
 VALUES

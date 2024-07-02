@@ -8,8 +8,6 @@ import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Product from './components/Product';
 import SingleProduct from './components/SingleProduct';
-// import Brands from './components/Brands';
-// import SingleBrand from './components/SingleBrand';
 import Form from './components/Form';
 import Card from './components/Card'
 
@@ -40,9 +38,6 @@ const App =()=> {
     }
 
 
-
-
-
     const handleSubmit =(e)=> {
         e.preventDefault()
         console.log(formData)
@@ -52,11 +47,6 @@ const App =()=> {
             data: formData
         })
     }
-
-
-
-    
-
 
 
     return (

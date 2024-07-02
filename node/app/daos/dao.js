@@ -1,5 +1,3 @@
-// where all the daos meet
-
 const daoCommon = require('./common/daoCommon')
 
 const brandDao = {

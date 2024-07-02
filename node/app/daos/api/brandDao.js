@@ -1,5 +1,3 @@
-//  dao tells mysql what to do
-
 const con = require('../../config/dbconfig')
 
 const brandDao = {

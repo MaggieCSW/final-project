@@ -1,27 +1,11 @@
-//  form data (uses useState & useEffect
-//  handleChange changes as the user is entering things into form
-
-//  event.target (in) is where youre getting this info from
-//  handleSubmit takes all form data and handles it
-
-
-// import { useId } from "react";
-
-
-
-
-
-
 const Form =( { formData, handleChange, handleSubmit } )=> {
 
 
 
-    // const id = useId()
-
     return(
         <div className="container">
             <form className="form" onSubmit={handleSubmit}>
-                <h1 className="text-center">sign up for 10% off:</h1>
+                <h1 className="text-center form-header">sign up for 10% off:</h1>
                 <div className="mb-3">
                     <label 
                         htmlFor={'fName'} 
@@ -89,7 +73,6 @@ const Form =( { formData, handleChange, handleSubmit } )=> {
                 
                 <div className="mb-3">
                     <label 
-                    // **************************************************************************
                         htmlFor={'password'} 
                         className="form-label text-capitalize"
                         >password

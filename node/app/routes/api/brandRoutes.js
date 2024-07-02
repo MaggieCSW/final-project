@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-// localhost:3005/api/brand
 
 const {brandDao: dao} = require('../../daos/dao')
 
@@ -9,7 +8,6 @@ router.get('/', (req, res)=> {
     dao.findAll(res, dao.table)
 })
 
-// localhost:3005/api/brand/count
 router.get('/count', (req, res)=> {
     dao.countAll(res, dao.table)
 })
