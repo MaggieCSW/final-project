@@ -1,15 +1,17 @@
-import { Route, Routes } from 'react-router-dom'
-// import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ErrorPage from './components/ErrorPage'
-import Home from './components/Home'
-import Products from './components/Products'
-import SingleProduct from './components/SingleProduct'
-import Brands from './components/Brands'
-import SingleBrand from './components/SingleBrand'
-import CreateAccount from './components/CreateAccount'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorPage from './components/ErrorPage';
+import Home from './components/Home';
+import Product from './components/Product';
+import SingleProduct from './components/SingleProduct';
+// import Brands from './components/Brands';
+// import SingleBrand from './components/SingleBrand';
+import Form from './components/Form';
+import Card from './components/Card'
 
 
 
@@ -17,26 +19,44 @@ const App =()=> {
 
     const [formData, setFormData] = 
     useState ({
-        firstName: '',
-        lastName: '',
+        fName: '',
+        lName: '',
         email: '',
         username: '',
-        phone: '',
         password: ''
     })
 
 
-    const handleChange = (event)=> {
-        const { name, value, type } = event.target
+    const handleChange = (e)=> {
+        const { name, value } = e.target
 
         setFormData(prevState => {
             return {
                 ...prevState,
-                [name]: type ===
+                [name]: value
                 
             }
         })
     }
+
+
+
+
+
+    const handleSubmit =(e)=> {
+        e.preventDefault()
+        console.log(formData)
+        axios ({
+            method: 'post',
+            url: 'http://localhost:3005/api/user/create',
+            data: formData
+        })
+    }
+
+
+
+    
+
 
 
     return (
@@ -45,18 +65,28 @@ const App =()=> {
             <Header />
                 <Routes>
                     <Route path='/' element={ <Home /> } /> 
-                    <Route path='/product' element={ <Products /> } />
-                    <Route path='/product/:id' element={ <SingleProduct /> } />
-                    <Route path='/brand' element={ <Brands /> } />
-                    <Route path='/brand/:id' element={ <SingleBrand /> } /> 
-                    <Route path='/user' element={ <CreateAccount /> } />
+                    <Route path='/product' element={ <Product /> } />
+                    <Route path='/:path/:id' element={ <SingleProduct /> } />
+                    <Route path='/product' element={ <Card /> } />
+                    <Route path='/user' element={ 
+                        <Form 
+                        formData={formData}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        /> } />
+                
                     <Route path='*' element={ <ErrorPage /> } /> 
                 </Routes>
             <Footer />
         </>
 
-    )
+)
 }
 
 
 export default App
+
+
+
+{/* <Route path='/brand' element={ <Brands /> } /> */}
+{/* <Route path='/brand/:id' element={ <SingleBrand /> } />  */}
